@@ -21,17 +21,21 @@
 		"issues": "https://github.com/tomzx/php-semver-checker-git/issues"
 	},
 	"repositories": [
+        {
+            "type": "path",
+            "url": "../php-semver-checker"
+        },
 		{
 			"type": "vcs",
 			"url": "https://github.com/tomzx/gitter"
 		}
 	],
 	"require": {
-		"php": ">=7.3",
+		"php": ">=8.0",
 		"klaussilveira/gitter": "dev-php-semver-checker",
-		"symfony/console": "^4.4|^5.1",
-		"tomzx/php-semver-checker": "^0.15.1",
-		"vierbergenlars/php-semver": "^3.0.2"
+		"symfony/console": "^6.0",
+		"vierbergenlars/php-semver": "^3.0.2",
+		"tomzx/php-semver-checker": "dev-master"
 	},
 	"require-dev": {
 		"mockery/mockery": "^1.4.4",
@@ -52,7 +56,7 @@
 	},
 	"config": {
 		"platform": {
-			"php": "7.3.0"
+			"php": "8.2.0"
 		}
 	},
 	"extra": {

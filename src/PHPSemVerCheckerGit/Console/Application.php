@@ -23,12 +23,12 @@ class Application extends SymfonyApplication {
 		parent::__construct('PHP Semantic Versioning Checker GIT by Tom Rochette', self::VERSION);
 	}
 
-	public function getHelp()
+	public function getHelp(): string
 	{
 		return self::$logo . parent::getHelp();
 	}
 
-	protected function getDefaultCommands()
+	protected function getDefaultCommands(): array
 	{
 		$commands = parent::getDefaultCommands();
 		$commands[] = $this->add(new CompareCommand());

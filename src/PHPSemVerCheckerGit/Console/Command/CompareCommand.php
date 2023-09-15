@@ -16,7 +16,7 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 class CompareCommand extends BaseCommand {
-	protected function configure()
+	protected function configure(): void
 	{
 		$this
 			->setName('compare')
@@ -33,7 +33,7 @@ class CompareCommand extends BaseCommand {
 			]);
 	}
 
-	protected function execute(InputInterface $input, OutputInterface $output)
+	protected function execute(InputInterface $input, OutputInterface $output): int
 	{
 		$startTime = microtime(true);
 
@@ -117,5 +117,7 @@ class CompareCommand extends BaseCommand {
 		$output->writeln('');
 		$output->writeln('[Scanned files] Before: ' . count($sourceBefore) . ' ('.$sourceBeforeMatchedCount.' unfiltered), After: ' . count($sourceAfter) . ' ('.$sourceAfterMatchedCount.' unfiltered)');
 		$output->writeln('Time: ' . round($duration, 3) . ' seconds, Memory: ' . round(memory_get_peak_usage() / 1024 / 1024, 3) . ' MB');
+
+        return 0;
 	}
 }
