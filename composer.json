@@ -22,8 +22,8 @@
 	},
 	"repositories": [
         {
-            "type": "path",
-            "url": "../php-semver-checker"
+            "type": "vcs",
+            "url": "https://github.com/shas2023/php-semver-checker"
         },
 		{
 			"type": "vcs",
@@ -35,7 +35,7 @@
 		"klaussilveira/gitter": "dev-php-semver-checker",
 		"symfony/console": "^6.0",
 		"vierbergenlars/php-semver": "^3.0.2",
-		"tomzx/php-semver-checker": "dev-master"
+		"tomzx/php-semver-checker": "dev-api-aware-comparison"
 	},
 	"require-dev": {
 		"mockery/mockery": "^1.4.4",
